@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -38,13 +38,6 @@ namespace NMaier.SimpleDlna.Utilities
       @"Video: .+ ([0-9]{2,})x([0-9]{2,}) ", RegexOptions.Compiled);
 
     public static readonly string FFmpegExecutable = null; //      FindExecutable("ffmpeg");
-
-    private static DirectoryInfo GetFFMpegFolder(
-      Environment.SpecialFolder folder)
-    {
-      return new DirectoryInfo(
-        Path.Combine(Environment.GetFolderPath(folder), "ffmpeg"));
-    }
 
     private static DirectoryInfo GetFFMpegFolder(
       Environment.SpecialFolder folder)
