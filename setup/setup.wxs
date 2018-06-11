@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="767750F4-7F20-4722-B080-5C0247B4E3C6"
+             Name="SimpleDLNA"
+             Language="1033"
+             Version="1.2"
+             Manufacturer="Nils Maier"
+             UpgradeCode="9BB9834F-0082-46E1-A93B-5411738F6C5C">
+
+        <Package Compressed="yes"/>
+
+        <Media Id="1" Cabinet="product.cab" EmbedCab="yes"/>
+
+        <Directory Name="SourceDir" Id="TARGETDIR">
+            <Directory Name="ProgramFilesFolder" Id="ProgramFilesFolder">
+                <Directory Name="Nils Maier" Id="_1">
+                    <Directory Name="SimpleDLNA" Id="_2">
+                        <Directory Name="x86" Id="_3">
+                            <Component Id="_1" Guid="9EF0B969-E518-4E46-987F-47570745A589">
+                                <File Source="..\util\bin\Release\x86\SQLite.Interop.dll"/>
+                            </Component>
+                        </Directory>
+                            <Component Id="_2" Guid="9EF0B969-E518-4E46-987F-47570745A589">
+                                <File Source="..\util\bin\Release\x64\SQLite.Interop.dll"/>
+                            </Component>
+                        </Directory>
+                        <Component Id="_3" Guid="3C67513D-01DD-4637-8A68-80971EB9504F">
+                            <File Source="GetOptNet.dll"/>
+                            <File Source="log4net.dll"/>
+                            <File Source="Microsoft.IO.RecyclableMemoryStream.dll"/>
+                            <File Source="NMaier.Windows.Forms.dll"/>
+                            <File Source="SimpleDlna.FileMediaServer.dll"/>
+                            <File Source="SimpleDlna.Server.dll"/>
+                            <File Source="SimpleDlna.Thumbnails.dll"/>
+                            <File Source="SimpleDlna.Utilities.dll"/>
+                            <File Source="System.Data.SQLite.dll"/>
+                            <File Source="taglib-sharp.dll"/>
+                        </Component>
+                    </Directory>
+                </Directory>
+            </Directory>
+        </Directory>
+        <Directory Name="#1919" Id="_5">
+            <Directory Name="SimpleDLNA" Id="_6">
+            </Directory>
+        </Directory>
+
+        <Feature Id="_1" Level="1">
+            <ComponentRef Id="_1"/>
+            <ComponentRef Id="_2"/>
+            <ComponentRef Id="_3"/>
+        </Feature>
+
+    </Product>
+</Wix>

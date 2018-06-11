@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO.Pipes;
 using System.Threading;
 using System.Windows.Forms;
@@ -10,16 +10,21 @@ namespace NMaier.SimpleDlna.GUI
     [STAThread]
     private static void Main()
     {
-      using (var mutex = new Mutex(false, @"Global\simpledlnaguilock")) {
+      using (var mutex = new Mutex(false, @"Global\simpledlnaguilock"))
+      {
 #if !DEBUG
-        if (!mutex.WaitOne(0, false)) {
+        if (!mutex.WaitOne(0, false))
+        {
           using (var pipe = new NamedPipeClientStream(
-              ".", "simpledlnagui", PipeDirection.Out)) {
-            try {
+              ".", "simpledlnagui", PipeDirection.Out))
+          {
+            try
+            {
               pipe.Connect(10000);
               pipe.WriteByte(1);
             }
-            catch (Exception) {
+            catch (Exception)
+            {
             }
             return;
           }
@@ -27,11 +32,14 @@ namespace NMaier.SimpleDlna.GUI
         GC.Collect();
 #endif
 
-        using (var main = new FormMain()) {
-          try {
+        using (var main = new FormMain())
+        {
+          try
+          {
             Application.Run(main);
           }
-          catch (Exception ex) {
+          catch (Exception ex)
+          {
             log4net.LogManager.GetLogger(typeof(Program)).Fatal(
               "Encountered fatal unhandled exception", ex);
             MessageBox.Show(
