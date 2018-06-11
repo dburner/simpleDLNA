@@ -162,12 +162,13 @@ namespace NMaier.SimpleDlna.FileMediaServer
     {
       get {
         MaybeInit();
-        if (!string.IsNullOrWhiteSpace(title)) {
+        /*if (!string.IsNullOrWhiteSpace(title)) {
           if (track.HasValue) {
             return $"{track.Value:D2}. — {title}";
           }
           return title;
         }
+		*/
         return base.Title;
       }
     }
@@ -251,7 +252,7 @@ namespace NMaier.SimpleDlna.FileMediaServer
           try {
             var t = tl.Tag;
             SetProperties(t);
-            InitCover(t);
+            //InitCover(t);
           }
           catch (Exception ex) {
             Debug("Failed to transpose Tag props", ex);

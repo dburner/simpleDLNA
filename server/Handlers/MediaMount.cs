@@ -94,23 +94,27 @@ namespace NMaier.SimpleDlna.Server
       }
       if (path.StartsWith("file/", StringComparison.Ordinal)) {
         var id = path.Split('/')[1];
-        InfoFormat("Serving file {0}", id);
         var item = GetItem(id) as IMediaResource;
+		InfoFormat("{0}", request.RemoteEndpoint.Address + " : " + item.Path);
         return new ItemResponse(Prefix, request, item);
       }
       if (path.StartsWith("cover/", StringComparison.Ordinal)) {
-        var id = path.Split('/')[1];
+        /*
+		var id = path.Split('/')[1];
         InfoFormat("Serving cover {0}", id);
         var item = GetItem(id) as IMediaCover;
         if (item == null) {
           throw new HttpStatusException(HttpCode.NotFound);
         }
         return new ItemResponse(Prefix, request, item.Cover, "Interactive");
+		*/
+		throw new HttpStatusException(HttpCode.NotFound);
+		
       }
       if (path.StartsWith("subtitle/", StringComparison.Ordinal)) {
         var id = path.Split('/')[1];
-        InfoFormat("Serving subtitle {0}", id);
         var item = GetItem(id) as IMetaVideoItem;
+		InfoFormat("{0}", request.RemoteEndpoint.Address + " : " + item.Subtitle.Path);
         if (item == null) {
           throw new HttpStatusException(HttpCode.NotFound);
         }
