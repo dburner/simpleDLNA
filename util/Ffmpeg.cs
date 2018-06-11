@@ -46,6 +46,13 @@ namespace NMaier.SimpleDlna.Utilities
         Path.Combine(Environment.GetFolderPath(folder), "ffmpeg"));
     }
 
+    private static DirectoryInfo GetFFMpegFolder(
+      Environment.SpecialFolder folder)
+    {
+      return new DirectoryInfo(
+        Path.Combine(Environment.GetFolderPath(folder), "ffmpeg"));
+    }
+
     private static string FindExecutable(string executable)
     {
       var os = Environment.OSVersion.Platform.ToString().ToUpperInvariant();

@@ -249,6 +249,8 @@ namespace NMaier.SimpleDlna.FileMediaServer
                 return;
               }
               break;
+            default:
+              break;
             }
           }
         }

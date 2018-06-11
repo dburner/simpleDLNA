@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
+using System.Net;
 using NMaier.SimpleDlna.Server;
 using NMaier.SimpleDlna.Server.Metadata;
 using NMaier.SimpleDlna.Utilities;
@@ -216,6 +217,7 @@ namespace NMaier.SimpleDlna.FileMediaServer
 
     public virtual void LoadCover()
     {
+<<<<<<< HEAD
 	  
       if (CachedCover != null) {
         return;
@@ -227,6 +229,15 @@ namespace NMaier.SimpleDlna.FileMediaServer
       CachedCover = null;
 	  */
 	  return;
+=======
+      if (CachedCover != null) {
+        return;
+      }
+      CachedCover = new Cover(Item);
+      CachedCover.OnCoverLazyLoaded += LazyLoadedCover;
+      CachedCover.ForceLoad();
+      CachedCover = null;
+>>>>>>> OhSoGood/master
     }
   }
 }
