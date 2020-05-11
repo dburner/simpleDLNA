@@ -3,10 +3,10 @@ using NMaier.SimpleDlna.Server;
 
 namespace NMaier.SimpleDlna.Thumbnails
 {
-  internal interface IThumbnailLoader
-  {
-    DlnaMediaTypes Handling { get; }
+    internal interface IThumbnailLoader
+    {
+        DlnaMediaTypes Handling { get; }
 
-    MemoryStream GetThumbnail(object item, ref int width, ref int height);
-  }
+        MemoryStream GetThumbnail(object item, ref int width, ref int height);
+    }
 }

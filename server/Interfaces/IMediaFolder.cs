@@ -2,24 +2,24 @@
 
 namespace NMaier.SimpleDlna.Server
 {
-  public interface IMediaFolder : IMediaItem
-  {
-    int ChildCount { get; }
+    public interface IMediaFolder : IMediaItem
+    {
+        int ChildCount { get; }
 
-    int FullChildCount { get; }
+        int FullChildCount { get; }
 
-    IEnumerable<IMediaFolder> ChildFolders { get; }
+        IEnumerable<IMediaFolder> ChildFolders { get; }
 
-    IEnumerable<IMediaResource> ChildItems { get; }
+        IEnumerable<IMediaResource> ChildItems { get; }
 
-    IMediaFolder Parent { get; set; }
+        IMediaFolder Parent { get; set; }
 
-    void AddResource(IMediaResource res);
+        void AddResource(IMediaResource res);
 
-    void Cleanup();
+        void Cleanup();
 
-    bool RemoveResource(IMediaResource res);
+        bool RemoveResource(IMediaResource res);
 
-    void Sort(IComparer<IMediaItem> sortComparer, bool descending);
-  }
+        void Sort(IComparer<IMediaItem> sortComparer, bool descending);
+    }
 }

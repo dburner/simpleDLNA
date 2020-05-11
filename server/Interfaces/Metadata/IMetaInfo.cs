@@ -2,10 +2,10 @@
 
 namespace NMaier.SimpleDlna.Server.Metadata
 {
-  public interface IMetaInfo
-  {
-    DateTime InfoDate { get; }
+    public interface IMetaInfo
+    {
+        DateTime InfoDate { get; }
 
-    long? InfoSize { get; }
-  }
+        long? InfoSize { get; }
+    }
 }

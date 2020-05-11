@@ -2,8 +2,8 @@
 
 namespace NMaier.SimpleDlna.Server.Metadata
 {
-  public interface IMetaDuration
-  {
-    TimeSpan? MetaDuration { get; }
-  }
+    public interface IMetaDuration
+    {
+        TimeSpan? MetaDuration { get; }
+    }
 }

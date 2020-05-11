@@ -2,15 +2,15 @@
 
 namespace NMaier.SimpleDlna.Server
 {
-  public interface IMediaItem
-    : IComparable<IMediaItem>, IEquatable<IMediaItem>, ITitleComparable
-  {
-    string Id { get; set; }
+    public interface IMediaItem
+      : IComparable<IMediaItem>, IEquatable<IMediaItem>, ITitleComparable
+    {
+        string Id { get; set; }
 
-    string Path { get; }
+        string Path { get; }
 
-    IHeaders Properties { get; }
+        IHeaders Properties { get; }
 
-    string Title { get; }
-  }
+        string Title { get; }
+    }
 }

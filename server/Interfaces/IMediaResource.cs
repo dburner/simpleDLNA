@@ -2,14 +2,14 @@
 
 namespace NMaier.SimpleDlna.Server
 {
-  public interface IMediaResource : IMediaItem, IMediaCover
-  {
-    DlnaMediaTypes MediaType { get; }
+    public interface IMediaResource : IMediaItem, IMediaCover
+    {
+        DlnaMediaTypes MediaType { get; }
 
-    string PN { get; }
+        string PN { get; }
 
-    DlnaMime Type { get; }
+        DlnaMime Type { get; }
 
-    Stream CreateContentStream();
-  }
+        Stream CreateContentStream();
+    }
 }

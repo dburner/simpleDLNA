@@ -1,8 +1,8 @@
 namespace NMaier.SimpleDlna.Thumbnails
 {
-  internal enum ThumbnailMakerBorder
-  {
-    Bordered,
-    Borderless
-  }
+    internal enum ThumbnailMakerBorder
+    {
+        Bordered,
+        Borderless
+    }
 }

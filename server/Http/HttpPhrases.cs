@@ -2,11 +2,11 @@
 
 namespace NMaier.SimpleDlna.Server
 {
-  internal static class HttpPhrases
-  {
-    public static readonly IDictionary<HttpCode, string> Phrases =
-      new Dictionary<HttpCode, string>
-      {
+    internal static class HttpPhrases
+    {
+        public static readonly IDictionary<HttpCode, string> Phrases =
+          new Dictionary<HttpCode, string>
+          {
         {HttpCode.Ok, "OK"},
         {HttpCode.Partial, "Partial Content"},
         {HttpCode.MovedPermanently, "Moved Permanently"},
@@ -16,6 +16,6 @@ namespace NMaier.SimpleDlna.Server
         {HttpCode.NotFound, "Not Found"},
         {HttpCode.RangeNotSatisfiable, "Requested Range not satisfiable"},
         {HttpCode.InternalError, "Internal Server Error"}
-      };
-  }
+          };
+    }
 }

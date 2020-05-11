@@ -5,18 +5,18 @@ using NMaier.Windows.Forms;
 
 namespace NMaier.SimpleDlna.GUI
 {
-  internal sealed partial class FormAbout : Form
-  {
-    public FormAbout()
+    internal sealed partial class FormAbout : Form
     {
-      InitializeComponent();
-      Text = $"About {ProductInformation.Title}";
-      Product.Text = ProductInformation.Title;
-      Product.Font = BoldFont;
-      Version.Text = $"Version {ProductInformation.ProductVersion}";
-      Copyright.Text = ProductInformation.Copyright;
-      Copyright.Font = ItalicFont;
-      License.Text = Encoding.UTF8.GetString(Resources.LICENSE);
+        public FormAbout()
+        {
+            InitializeComponent();
+            Text = $"About {ProductInformation.Title}";
+            Product.Text = ProductInformation.Title;
+            Product.Font = BoldFont;
+            Version.Text = $"Version {ProductInformation.ProductVersion}";
+            Copyright.Text = ProductInformation.Copyright;
+            Copyright.Font = ItalicFont;
+            License.Text = Encoding.UTF8.GetString(Resources.LICENSE);
+        }
     }
-  }
 }

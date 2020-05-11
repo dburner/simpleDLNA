@@ -2,7 +2,7 @@
 
 namespace NMaier.SimpleDlna.Server
 {
-  public interface IMediaAudioResource : IMediaResource, IMetaAudioItem
-  {
-  }
+    public interface IMediaAudioResource : IMediaResource, IMetaAudioItem
+    {
+    }
 }

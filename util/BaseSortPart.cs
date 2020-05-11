@@ -2,32 +2,36 @@
 
 namespace NMaier.SimpleDlna.Utilities
 {
-  internal abstract class BaseSortPart : IComparable<BaseSortPart>
-  {
-    private readonly Type type;
-
-    protected BaseSortPart()
+    internal abstract class BaseSortPart : IComparable<BaseSortPart>
     {
-      type = GetType();
-    }
+        private readonly Type type;
 
-    public int CompareTo(BaseSortPart other)
-    {
-      if (other == null) {
-        return 1;
-      }
-      if (type != other.type) {
-        if (type == typeof (StringSortPart)) {
-          return 1;
+        protected BaseSortPart()
+        {
+            type = GetType();
         }
-        return -1;
-      }
-      var sp = other as StringSortPart;
-      if (sp != null) {
-        return ((StringSortPart)this).CompareTo(sp);
-      }
-      return ((NumericSortPart)this).CompareTo(
-        (NumericSortPart)other);
+
+        public int CompareTo(BaseSortPart other)
+        {
+            if (other == null)
+            {
+                return 1;
+            }
+            if (type != other.type)
+            {
+                if (type == typeof(StringSortPart))
+                {
+                    return 1;
+                }
+                return -1;
+            }
+            var sp = other as StringSortPart;
+            if (sp != null)
+            {
+                return ((StringSortPart)this).CompareTo(sp);
+            }
+            return ((NumericSortPart)this).CompareTo(
+              (NumericSortPart)other);
+        }
     }
-  }
 }

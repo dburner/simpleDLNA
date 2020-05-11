@@ -2,12 +2,12 @@
 
 namespace NMaier.SimpleDlna.Server
 {
-  public interface IVolatileMediaServer
-  {
-    bool Rescanning { get; set; }
+    public interface IVolatileMediaServer
+    {
+        bool Rescanning { get; set; }
 
-    void Rescan();
+        void Rescan();
 
-    event EventHandler Changed;
-  }
+        event EventHandler Changed;
+    }
 }

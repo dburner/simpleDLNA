@@ -1,4 +1,4 @@
 ﻿namespace NMaier.SimpleDlna.Utilities
 {
-  public delegate void StreamPumpCallback(StreamPump pump, StreamPumpResult result);
+    public delegate void StreamPumpCallback(StreamPump pump, StreamPumpResult result);
 }

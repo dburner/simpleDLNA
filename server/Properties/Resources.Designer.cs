@@ -8,10 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NMaier.SimpleDlna.Server.Properties {
+namespace NMaier.SimpleDlna.Server.Properties
+{
     using System;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,74 +23,88 @@ namespace NMaier.SimpleDlna.Server.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
-        
+    internal class Resources
+    {
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal Resources()
+        {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
-            get {
-                if (object.ReferenceEquals(resourceMan, null)) {
+        internal static global::System.Resources.ResourceManager ResourceManager
+        {
+            get
+            {
+                if (object.ReferenceEquals(resourceMan, null))
+                {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NMaier.SimpleDlna.Server.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
-            get {
+        internal static global::System.Globalization.CultureInfo Culture
+        {
+            get
+            {
                 return resourceCulture;
             }
-            set {
+            set
+            {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] browse_css {
-            get {
+        internal static byte[] browse_css
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("browse_css", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] connectionmanager {
-            get {
+        internal static byte[] connectionmanager
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("connectionmanager", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] contentdirectory {
-            get {
+        internal static byte[] contentdirectory
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("contentdirectory", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;root xmlns=&quot;urn:schemas-upnp-org:device-1-0&quot; xmlns:dlna=&quot;urn:schemas-dlna-org:device-1-0&quot; xmlns:sec=&quot;http://www.sec.co.kr/dlna&quot;&gt;
@@ -106,77 +121,93 @@ namespace NMaier.SimpleDlna.Server.Properties {
         ///    &lt;deviceType&gt;urn:schemas-upnp-org:device:MediaServer:1&lt;/deviceType&gt;
         ///    &lt;manufacturer&gt;tn123.org&lt;/manufactu [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string description {
-            get {
+        internal static string description
+        {
+            get
+            {
                 return ResourceManager.GetString("description", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] favicon {
-            get {
+        internal static byte[] favicon
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("favicon", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] largeJPEG {
-            get {
+        internal static byte[] largeJPEG
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("largeJPEG", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] largePNG {
-            get {
+        internal static byte[] largePNG
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("largePNG", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] MSMediaReceiverRegistrar {
-            get {
+        internal static byte[] MSMediaReceiverRegistrar
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("MSMediaReceiverRegistrar", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] smallJPEG {
-            get {
+        internal static byte[] smallJPEG
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("smallJPEG", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] smallPNG {
-            get {
+        internal static byte[] smallPNG
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("smallPNG", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] x_featurelist {
-            get {
+        internal static byte[] x_featurelist
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("x_featurelist", resourceCulture);
                 return ((byte[])(obj));
             }

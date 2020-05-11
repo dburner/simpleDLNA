@@ -6,41 +6,46 @@ using SystemInformation = NMaier.SimpleDlna.Utilities.SystemInformation;
 
 namespace NMaier.SimpleDlna.GUI
 {
-  public partial class FormSettings : Form
-  {
-    private const string APP_KEY_NAME = "SimpleDLNA";
-
-    private readonly StartupUtilities startUpUtilities;
-
-    public FormSettings()
+    public partial class FormSettings : Form
     {
-      InitializeComponent();
-      Icon = Resources.preferencesIcon;
+        private const string APP_KEY_NAME = "SimpleDLNA";
 
-      if (!SystemInformation.IsRunningOnMono()) {
-        startUpUtilities = new StartupUtilities(StartupUtilities.StartupUserScope.CurrentUser);
-        checkAutoStart.Checked = startUpUtilities.CheckIfRunAtWinBoot(APP_KEY_NAME);
-      }
-      else {
-        checkAutoStart.Visible = false;
-      }
-    }
+        private readonly StartupUtilities startUpUtilities;
 
-    private void buttonBrowseCacheFile_Click(object sender, EventArgs e)
-    {
-      if (folderBrowserDialog.ShowDialog() == DialogResult.OK) {
-        textCacheFile.Text = folderBrowserDialog.SelectedPath;
-      }
-    }
+        public FormSettings()
+        {
+            InitializeComponent();
+            Icon = Resources.preferencesIcon;
 
-    private void checkAutoStart_CheckedChanged(object sender, EventArgs e)
-    {
-      if (checkAutoStart.Checked) {
-        startUpUtilities.InstallAutoRun(APP_KEY_NAME);
-      }
-      else {
-        startUpUtilities.UninstallAutoRun(APP_KEY_NAME);
-      }
+            if (!SystemInformation.IsRunningOnMono())
+            {
+                startUpUtilities = new StartupUtilities(StartupUtilities.StartupUserScope.CurrentUser);
+                checkAutoStart.Checked = startUpUtilities.CheckIfRunAtWinBoot(APP_KEY_NAME);
+            }
+            else
+            {
+                checkAutoStart.Visible = false;
+            }
+        }
+
+        private void buttonBrowseCacheFile_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                textCacheFile.Text = folderBrowserDialog.SelectedPath;
+            }
+        }
+
+        private void checkAutoStart_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkAutoStart.Checked)
+            {
+                startUpUtilities.InstallAutoRun(APP_KEY_NAME);
+            }
+            else
+            {
+                startUpUtilities.UninstallAutoRun(APP_KEY_NAME);
+            }
+        }
     }
-  }
 }

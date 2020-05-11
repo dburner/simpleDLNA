@@ -3,12 +3,12 @@ using NMaier.SimpleDlna.Server;
 
 namespace NMaier.SimpleDlna.FileMediaServer
 {
-  internal sealed class PlainRootFolder : PlainFolder
-  {
-    internal PlainRootFolder(FileServer server, DirectoryInfo di)
-      : base(server, null, di)
+    internal sealed class PlainRootFolder : PlainFolder
     {
-      Id = Identifiers.GENERAL_ROOT;
+        internal PlainRootFolder(FileServer server, DirectoryInfo di)
+          : base(server, null, di)
+        {
+            Id = Identifiers.GENERAL_ROOT;
+        }
     }
-  }
 }

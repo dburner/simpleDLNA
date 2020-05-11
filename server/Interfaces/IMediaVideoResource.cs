@@ -2,7 +2,7 @@
 
 namespace NMaier.SimpleDlna.Server
 {
-  public interface IMediaVideoResource : IMediaResource, IMetaVideoItem
-  {
-  }
+    public interface IMediaVideoResource : IMediaResource, IMetaVideoItem
+    {
+    }
 }

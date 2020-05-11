@@ -2,8 +2,8 @@
 
 namespace NMaier.SimpleDlna.Server.Views
 {
-  public interface IView : IRepositoryItem
-  {
-    IMediaFolder Transform(IMediaFolder oldRoot);
-  }
+    public interface IView : IRepositoryItem
+    {
+        IMediaFolder Transform(IMediaFolder oldRoot);
+    }
 }

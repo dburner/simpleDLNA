@@ -2,25 +2,26 @@
 
 namespace NMaier.SimpleDlna.Utilities
 {
-  internal sealed class StringSortPart
-    : BaseSortPart, IComparable<StringSortPart>
-  {
-    private readonly StringComparer comparer;
-
-    private readonly string str;
-
-    internal StringSortPart(string str, StringComparer comparer)
+    internal sealed class StringSortPart
+      : BaseSortPart, IComparable<StringSortPart>
     {
-      this.str = str;
-      this.comparer = comparer;
-    }
+        private readonly StringComparer comparer;
 
-    public int CompareTo(StringSortPart other)
-    {
-      if (other == null) {
-        throw new ArgumentNullException(nameof(other));
-      }
-      return comparer.Compare(str, other.str);
+        private readonly string str;
+
+        internal StringSortPart(string str, StringComparer comparer)
+        {
+            this.str = str;
+            this.comparer = comparer;
+        }
+
+        public int CompareTo(StringSortPart other)
+        {
+            if (other == null)
+            {
+                throw new ArgumentNullException(nameof(other));
+            }
+            return comparer.Compare(str, other.str);
+        }
     }
-  }
 }

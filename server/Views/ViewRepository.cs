@@ -2,7 +2,7 @@
 
 namespace NMaier.SimpleDlna.Server.Views
 {
-  public sealed class ViewRepository : Repository<IView>
-  {
-  }
+    public sealed class ViewRepository : Repository<IView>
+    {
+    }
 }

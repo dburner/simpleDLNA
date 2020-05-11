@@ -1,11 +1,11 @@
 namespace NMaier.SimpleDlna.Thumbnails
 {
-  public interface IThumbnail
-  {
-    int Height { get; }
+    public interface IThumbnail
+    {
+        int Height { get; }
 
-    int Width { get; }
+        int Width { get; }
 
-    byte[] GetData();
-  }
+        byte[] GetData();
+    }
 }

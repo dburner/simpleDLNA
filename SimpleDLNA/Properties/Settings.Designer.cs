@@ -8,77 +8,96 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NMaier.SimpleDlna.GUI.Properties {
-    
-    
+namespace NMaier.SimpleDlna.GUI.Properties
+{
+
+
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
+    {
+
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-        
-        public static Settings Default {
-            get {
+
+        public static Settings Default
+        {
+            get
+            {
                 return defaultInstance;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string cache {
-            get {
+        public string cache
+        {
+            get
+            {
                 return ((string)(this["cache"]));
             }
-            set {
+            set
+            {
                 this["cache"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public decimal port {
-            get {
+        public decimal port
+        {
+            get
+            {
                 return ((decimal)(this["port"]));
             }
-            set {
+            set
+            {
                 this["port"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool MustUpgrade {
-            get {
+        public bool MustUpgrade
+        {
+            get
+            {
                 return ((bool)(this["MustUpgrade"]));
             }
-            set {
+            set
+            {
                 this["MustUpgrade"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool filelogging {
-            get {
+        public bool filelogging
+        {
+            get
+            {
                 return ((bool)(this["filelogging"]));
             }
-            set {
+            set
+            {
                 this["filelogging"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool startminimized {
-            get {
+        public bool startminimized
+        {
+            get
+            {
                 return ((bool)(this["startminimized"]));
             }
-            set {
+            set
+            {
                 this["startminimized"] = value;
             }
         }

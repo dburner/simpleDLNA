@@ -4,33 +4,36 @@ using System.Configuration;
 
 namespace NMaier.SimpleDlna.GUI.Properties
 {
-  internal sealed partial class Settings
-  {
-    public Settings()
+    internal sealed partial class Settings
     {
-      try {
-        if (MustUpgrade) {
-          Upgrade();
-          MustUpgrade = false;
-          Save();
+        public Settings()
+        {
+            try
+            {
+                if (MustUpgrade)
+                {
+                    Upgrade();
+                    MustUpgrade = false;
+                    Save();
+                }
+            }
+            catch (Exception)
+            {
+            }
         }
-      }
-      catch (Exception) {
-      }
-    }
 
-    [UserScopedSetting]
-    [DefaultSettingValue("")]
-    public List<ServerDescription> Descriptors
-    {
-      get
-      {
-        return this["Descriptors"] as List<ServerDescription>;
-      }
-      set
-      {
-        this["Descriptors"] = value;
-      }
+        [UserScopedSetting]
+        [DefaultSettingValue("")]
+        public List<ServerDescription> Descriptors
+        {
+            get
+            {
+                return this["Descriptors"] as List<ServerDescription>;
+            }
+            set
+            {
+                this["Descriptors"] = value;
+            }
+        }
     }
-  }
 }
