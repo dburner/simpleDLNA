@@ -14,6 +14,8 @@ namespace NMaier.SimpleDlna.Utilities
 
   public static class FFmpeg
   {
+    private static ILog Logger = LogManager.GetLogger(typeof(FFmpeg));
+
     private static readonly DirectoryInfo[] specialLocations =
     {
       GetFFMpegFolder(Environment.SpecialFolder.CommonProgramFiles),
@@ -21,8 +23,7 @@ namespace NMaier.SimpleDlna.Utilities
       GetFFMpegFolder(Environment.SpecialFolder.ProgramFiles),
       GetFFMpegFolder(Environment.SpecialFolder.ProgramFilesX86),
       GetFFMpegFolder(Environment.SpecialFolder.UserProfile),
-      new DirectoryInfo(Environment.GetFolderPath(
-        Environment.SpecialFolder.UserProfile))
+      new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile))
     };
 
     private static readonly InfoCache infoCache = new InfoCache(500);
@@ -37,7 +38,7 @@ namespace NMaier.SimpleDlna.Utilities
     private static readonly Regex regDimensions = new Regex(
       @"Video: .+ ([0-9]{2,})x([0-9]{2,}) ", RegexOptions.Compiled);
 
-    public static readonly string FFmpegExecutable = null; //      FindExecutable("ffmpeg");
+    public static readonly string FFmpegExecutable = FindExecutable("ffmpeg");
 
     private static DirectoryInfo GetFFMpegFolder(
       Environment.SpecialFolder folder)
@@ -88,9 +89,9 @@ namespace NMaier.SimpleDlna.Utilities
         }
       }
 
-      foreach (var i in places) {
-        LogManager.GetLogger(typeof (FFmpeg)).DebugFormat(
-          "Searching {0}", i.FullName);
+      foreach (var i in places)
+      {
+        Logger.DebugFormat("Searching {0}", i.FullName);
         if (!i.Exists) {
           continue;
         }
@@ -101,14 +102,10 @@ namespace NMaier.SimpleDlna.Utilities
         };
         foreach (var di in folders) {
           try {
-            var r = di.GetFiles(executable, SearchOption.TopDirectoryOnly);
-            if (r.Length != 0) {
-              var rv = r[0];
-              LogManager.GetLogger(typeof (FFmpeg)).InfoFormat(
-                "Found {0} at {1}",
-                executable,
-                rv.FullName
-                );
+            var fileSearchResults = di.GetFiles(executable, SearchOption.TopDirectoryOnly);
+            if (fileSearchResults.Length != 0) {
+              var rv = fileSearchResults[0];
+              Logger.InfoFormat("Found {0} at {1}", executable, rv.FullName );
               return rv.FullName;
             }
           }
@@ -117,8 +114,7 @@ namespace NMaier.SimpleDlna.Utilities
           }
         }
       }
-      LogManager.GetLogger(typeof (FFmpeg)).WarnFormat(
-        "Did not find {0}", executable);
+      Logger.WarnFormat("Did not find {0}", executable);
       return null;
     }
 

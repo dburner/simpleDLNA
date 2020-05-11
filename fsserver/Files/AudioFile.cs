@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Runtime.Serialization;
 using NMaier.SimpleDlna.Server;
@@ -162,13 +162,13 @@ namespace NMaier.SimpleDlna.FileMediaServer
     {
       get {
         MaybeInit();
-        /*if (!string.IsNullOrWhiteSpace(title)) {
-          if (track.HasValue) {
+        if (!string.IsNullOrWhiteSpace(title)) {
+          if (track != null) {
             return $"{track.Value:D2}. — {title}";
           }
           return title;
         }
-		*/
+	
         return base.Title;
       }
     }

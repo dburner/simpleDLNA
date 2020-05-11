@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -102,7 +102,8 @@ namespace NMaier.SimpleDlna.Thumbnails
       ref int width,
       ref int height)
     {
-      using (var p = new Process()) {
+      using (var p = new Process())
+      {
         var pos = 20L;
         try {
           var length = stream.Length;

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
@@ -340,8 +340,7 @@ namespace NMaier.SimpleDlna.Server
       return objectClass;
     }
 
-    private IEnumerable<KeyValuePair<string, string>> HandleBrowse(
-      IRequest request, IHeaders sparams)
+    private IEnumerable<KeyValuePair<string, string>> HandleBrowse(IRequest request, IHeaders sparams)
     {
       var key = Prefix + sparams.HeaderBlock;
       AttributeCollection rv;

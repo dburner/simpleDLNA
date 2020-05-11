@@ -88,11 +88,11 @@ namespace NMaier.SimpleDlna.FileMediaServer
         {
           return CachedCover;
         }
-        /*
+
         CachedCover = new Cover(Item);
         CachedCover.OnCoverLazyLoaded += LazyLoadedCover;
         return CachedCover;
-		*/
+
         return null;
       }
     }
@@ -247,12 +247,12 @@ namespace NMaier.SimpleDlna.FileMediaServer
       {
         return;
       }
-      /*
-	  CachedCover = new Cover(Item);
+
+      CachedCover = new Cover(Item);
       CachedCover.OnCoverLazyLoaded += LazyLoadedCover;
       CachedCover.ForceLoad();
       CachedCover = null;
-	  */
+
       return;
     }
   }

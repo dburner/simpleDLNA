@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Net;
 using System.Reflection;
@@ -8,31 +8,20 @@ namespace NMaier.SimpleDlna.Utilities
 {
   public class HttpStream : Stream, IDisposable
   {
-    private const int BUFFER_SIZE = 1 << 10;
+    private const int  BUFFER_SIZE = 1 << 10;
+    private const long SMALL_SEEK  = 1 << 9;
+    private const int  TIMEOUT     = 30000;
 
-    private const long SMALL_SEEK = 1 << 9;
-
-    private const int TIMEOUT = 30000;
-
-    private static readonly ILog logger =
-      LogManager.GetLogger(typeof (HttpStream));
-
+    private static readonly ILog logger = LogManager.GetLogger(typeof (HttpStream));
     public static readonly string UserAgent = GenerateUserAgent();
 
     private readonly Uri referrer;
-
     private readonly Uri uri;
-
     private Stream bufferedStream;
-
     private long? length;
-
     private long position;
-
     private HttpWebRequest request;
-
     private HttpWebResponse response;
-
     private Stream responseStream;
 
     public HttpStream(Uri uri)
